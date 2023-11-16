@@ -75,16 +75,16 @@ public class Matrix {
 
     // Function to add two matrices
     public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
-        int m = matrix1.length;
-        int n = matrix1[0].length;
-        int[][] result = new int[m][n];
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        int m = matrix1.length; // number of rows in matrix1.
+        int n = matrix1[0].length; // The column length of matrix1.
+        int[][] result = new int[m][n]; // result matrix.
+        for (int i = 0; i < m; i++) // iterates 3 times if the number of rows in matrix is 3
+        {
+            for (int j = 0; j < n; j++) // Iterates 3 times if the number of columns is 3
+            {
                 result[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
-
         return result;
     }
 
